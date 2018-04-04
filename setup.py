@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from codecs import open
 import os
 
-from metrics import __version__
+from metrics_pytest_cov import __version__
 here = os.path.abspath(os.path.dirname(__file__))
 
 # Get the long description from the README file
@@ -23,9 +23,9 @@ install_requires = [x.strip() for x in all_reqs if ('git+' not in x) and
 dependency_links = [x.strip().replace('git+', '') for x in all_reqs if 'git+' not in x]
 
 setup(
-    name='metrics.gitinfo',
+    name='metrics.pytest-cov',
     version=__version__,
-    description='metrics.gitinfo is a plugin for the metrics package',
+    description='metrics.pytest-cov is a plugin for the metrics package',
     long_description=long_description,
     license='MIT',
     url='https://github.com/markfink/metrics.gitinfo/',
@@ -43,10 +43,10 @@ setup(
     author='Mark Fink',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email='mark@finklabs.de',
+    author_email='mark@mark-fink.de',
     entry_points={
         'metrics.plugin.10': [
-            'gitinfo=metrics_gitinfo.gitinfo',
+            'cov=metrics_pytest_cov.cov',
         ],
     }
 )
