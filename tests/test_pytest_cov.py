@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from metrics_pylint.info import PyLintMetric
 import os
 import tempfile
 from shutil import copyfile

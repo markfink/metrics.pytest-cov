@@ -25,10 +25,10 @@ dependency_links = [x.strip().replace('git+', '') for x in all_reqs if 'git+' no
 setup(
     name='metrics.pytest-cov',
     version=__version__,
-    description='metrics.pytest-cov is a plugin for the metrics package',
+    description='plugin for the metrics package (extracts % coverage for python files and missing)',
     long_description=long_description,
     license='MIT',
-    url='https://github.com/markfink/metrics.gitinfo/',
+    url='https://github.com/markfink/metrics.pytest-cov/',
     classifiers=[
         'Natural Language :: English',
         'Intended Audience :: Developers',
