@@ -24,7 +24,7 @@ def coverage_info():
 def test_pytest_cov_python_file(coverage_info):
     # process_file(self, language, key, token_list):
     coverage_info.process_file('Python', 'metrics/mccabe.py', [])
-    assert coverage_info.metrics == {'coverage': 87.5, 'missing': '43, 47, 51'}
+    assert coverage_info.metrics == {'test_coverage': 87.5, 'test_missing': '43, 47, 51'}
 
 
 def test_pytest_cov_text_file(coverage_info):
@@ -36,5 +36,5 @@ def test_pytest_cov_text_file(coverage_info):
 def test_pytest_cov_unknown_python_file(coverage_info):
     # process_file(self, language, key, token_list):
     coverage_info.process_file('Python', 'unknown/not_there.py', [])
-    assert coverage_info.metrics == {}
+    assert coverage_info.metrics == {'test_coverage': 0.0, 'test_missing': 'all'}
 
